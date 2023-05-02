@@ -1,11 +1,13 @@
 <script>
-import Card   from './partial/Card.vue';
-import { store } from '../data/store';
+import Card         from './partial/Card.vue';
+import FilterCards  from './partial/FilterCards.vue';
+import { store }    from '../data/store';
 
 export default {
     name: 'Main',
     components: {
-        Card
+        Card,
+        FilterCards
     },
     data (){
         return {
@@ -17,10 +19,13 @@ export default {
 
 <template>
     <main class="p-2">
+
+        <FilterCards />
+        
         <div class="container p-4">
             <div class="top-dark-bar d-flex align-items-center">
                 <h5 class="text-light p-2">
-                    Found...
+                    Found {{ store.cardsArray.length }} Cards
                 </h5>
             </div>
             <div class="cards-container d-flex flex-wrap">
@@ -44,7 +49,7 @@ export default {
     main {
         background-color: $primary;
 
-        .container {
+        .container:not(:first-child) {
             background-color: white;
             .top-dark-bar {
                 height: 70px;

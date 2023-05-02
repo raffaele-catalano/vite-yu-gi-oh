@@ -28,6 +28,8 @@ export default {
     .yugi-card {
         background-color: $primary;
         width: calc(100% / 5 - 10px);
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
         
         .card-image {
             img {

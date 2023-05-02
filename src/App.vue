@@ -1,8 +1,8 @@
 <script>
-import axios from 'axios';
-import { store } from './data/store';
-import Header from './components/Header.vue';
-import Main   from './components/Main.vue';
+import axios      from 'axios';
+import { store }  from './data/store';
+import Header     from './components/Header.vue';
+import Main       from './components/Main.vue';
 
 export default {
     name: 'App',
@@ -12,7 +12,7 @@ export default {
     },
     methods: {
       getApi(){
-        axios.get(store.apiURL + "?num=104&offset=0").then(result => {
+        axios.get(store.apiURL + "?num=55&offset=0").then(result => {
         store.cardsArray = result.data.data;
         })
       }
