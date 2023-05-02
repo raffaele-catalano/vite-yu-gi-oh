@@ -1,10 +1,16 @@
 <script>
-import Card   from './Card.vue';
+import Card   from './partial/Card.vue';
+import { store } from '../data/store';
 
 export default {
     name: 'Main',
     components: {
         Card
+    },
+    data (){
+        return {
+            store,
+        }
     }
 }
 </script>
@@ -19,7 +25,13 @@ export default {
             </div>
             <div class="cards-container d-flex flex-wrap">
 
-                <Card />
+                <Card 
+                v-for="card in store.cardsArray"
+                :key="card.id"
+                :imgURL="card.card_images[0].image_url"
+                :cardName="card.name"
+                :cardType="card.type"
+                />
 
             </div>
         </div>
@@ -40,7 +52,6 @@ export default {
             }
 
             .cards-container {
-                background-color: lime;
                 justify-content: space-between;
             }
         }

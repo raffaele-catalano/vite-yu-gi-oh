@@ -12,8 +12,8 @@ export default {
     },
     methods: {
       getApi(){
-        axios.get(store.apiURL).then(result => {
-        store.resultArray = result.data.data;
+        axios.get(store.apiURL + "?num=104&offset=0").then(result => {
+        store.cardsArray = result.data.data;
         })
       }
     },
