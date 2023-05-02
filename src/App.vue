@@ -1,13 +1,22 @@
 <script>
+import axios from 'axios';
+import Header from './components/Header.vue';
+import Main   from './components/Main.vue';
+
 export default {
-  
+    name: 'App',
+    components: {
+      Header,
+      Main,
+    }
 }
 </script>
 
 <template>
-  <h1>Test</h1>
+  <Header />
+  <Main />
 </template>
 
-<style>
-
+<style lang="scss">
+  @use "./scss/main.scss" as *;
 </style>
