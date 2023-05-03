@@ -68,10 +68,7 @@ export default {
                 height: 70px;
                 background-color: black;
                 border-radius: 5px 5px 0 0;
-            }
-            
-            .cards-container {
-                justify-content: space-between;
+                margin: 0 5px;
             }
         }
     }

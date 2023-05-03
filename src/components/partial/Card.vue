@@ -10,7 +10,7 @@ export default {
 </script>
 
 <template>
-    <div class="yugi-card mb-3 d-flex flex-column justify-content-between">
+    <div class="yugi-card mb-3 d-flex flex-column">
         <div class="card-image">
             <img :src="imgURL" :alt="cardName">
         </div>
@@ -29,6 +29,7 @@ export default {
         background-color: $primary;
         width: calc(100% / 5 - 10px);
         border-radius: 5px;
+        margin: 0 5px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
         
         .card-image {
