@@ -14,7 +14,7 @@ export default {
         <div class="card-image">
             <img :src="imgURL" :alt="cardName">
         </div>
-        <div class="card-name mt-1">
+        <div class="card-name mt-1 text-light">
             <p class="text-center fw-bold">{{cardName}}</p>
         </div>
         <div class="card-type">

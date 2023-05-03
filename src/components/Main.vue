@@ -7,11 +7,16 @@ export default {
     name: 'Main',
     components: {
         Card,
-        FilterCards
+        FilterCards,
     },
     data (){
         return {
             store,
+        }
+    },
+    methods: {
+        filterTypes() {
+            this.$emit('startFilterCards');
         }
     }
 }
@@ -20,14 +25,15 @@ export default {
 <template>
     <main class="p-2">
 
-        <FilterCards />
+        <FilterCards @filterCardsType="filterTypes" />
         
         <div class="container p-4">
             <div class="top-dark-bar d-flex align-items-center">
                 <h5 class="text-light p-2">
-                    Found {{ store.cardsArray.length }} Cards
+                    {{ store.cardsArray.length }} Cards Founded
                 </h5>
             </div>
+
             <div class="cards-container d-flex flex-wrap">
 
                 <Card 
@@ -40,6 +46,7 @@ export default {
 
             </div>
         </div>
+
     </main>
 </template>
 
@@ -51,11 +58,12 @@ export default {
 
         .container:not(:first-child) {
             background-color: white;
+            box-shadow: 0 0 15px rgba($color: #000000, $alpha: 0.5);
             .top-dark-bar {
                 height: 70px;
                 background-color: black;
             }
-
+            
             .cards-container {
                 justify-content: space-between;
             }
