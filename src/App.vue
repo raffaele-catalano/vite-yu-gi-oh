@@ -56,7 +56,7 @@ export default {
   <Header title="Yu-Gi-Oh Api" />
   <Loader v-if="store.isLoading" />
   <div class="container-after-loading" v-else>
-    <Main   @startFilterCards="getApi" />
+    <Main   @startFilterCards="getApi" @reset="getApi" />
     <Footer @startSearch="getApi" />
   </div>
 </template>

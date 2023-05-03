@@ -18,7 +18,8 @@ export default {
                 <option v-for="(type) in store.cardsType" :key="type" :value="type" >{{ type }}</option>
             </select>
             </div>
-        <button class="btn btn-dark m-3" @click="$emit('filterCardsType')">Search</button>
+        <button class="btn btn-dark my-3 mx-1" @click="$emit('filterCardsType')">Search</button>
+        <button class="btn btn-danger my-3 mx-1" @click="$emit('resetCards')">Reset</button>
     </div>
 </template>
 
