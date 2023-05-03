@@ -34,6 +34,11 @@ export default {
         .card-image {
             img {
                 width: 100%;
+                cursor: pointer;
+            }
+            img:hover {
+                transform: scale(1.3);
+                transition: .6s;
             }
         }
 
